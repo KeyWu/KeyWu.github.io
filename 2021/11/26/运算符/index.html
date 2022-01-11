@@ -1,0 +1,1631 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="运算符, KeyWu 算法 笔记">
+    <meta name="description" content="第04章_运算符讲师：尚硅谷-宋红康（江湖人称：康师傅）
+官网：http://www.atguigu.com
+
+1. 算术运算符算术运算符主要用于数学运算，其可以连接运算符前后的两个数值或表达式，对数值或表达式进行加（+）、减（-）、乘（*">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>运算符 | KeyWu的世界</title>
+    <link rel="icon" type="image/png" href="/key-wu_ljm/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/css/my.css">
+
+    <script src="/key-wu_ljm/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/key-wu_ljm/" class="waves-effect waves-light">
+                    
+                    <img src="/key-wu_ljm/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">KeyWu的世界</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/key-wu_ljm/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/key-wu_ljm/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/key-wu_ljm/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/key-wu_ljm/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/key-wu_ljm/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/key-wu_ljm/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/key-wu_ljm/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/key-wu_ljm/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">KeyWu的世界</div>
+        <div class="logo-desc">
+            
+            吴楷的个人笔记，日常记录
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/key-wu_ljm/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/key-wu_ljm/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/key-wu_ljm/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/key-wu_ljm/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/key-wu_ljm/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/key-wu_ljm/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/key-wu_ljm/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/key-wu_ljm/medias/featureimages/25.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">运算符</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/key-wu_ljm/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/key-wu_ljm/tags/MySQL/">
+                                <span class="chip bg-color">MySQL</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-11-26
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-11-26
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    6.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    26 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/key-wu_ljm/libs/prism/prism.css">
+        
+
+        
+        <!-- 代码块折行 -->
+        <style type="text/css">
+            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
+        </style>
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="第04章-运算符"><a href="#第04章-运算符" class="headerlink" title="第04章_运算符"></a>第04章_运算符</h1><p>讲师：尚硅谷-宋红康（江湖人称：康师傅）</p>
+<p>官网：<a target="_blank" rel="noopener" href="http://www.atguigu.com/">http://www.atguigu.com</a></p>
+<hr>
+<h2 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1. 算术运算符"></a>1. 算术运算符</h2><p>算术运算符主要用于数学运算，其可以连接运算符前后的两个数值或表达式，对数值或表达式进行加（+）、减（-）、乘（*）、除（/）和取模（%）运算。</p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012100749193.png" alt="image-20211012100749193"></p>
+<p><strong>1．加法与减法运算符</strong></p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 100, 100 + 0, 100 - 0, 100 + 50, 100 + 50 -30, 100 + 35.5, 100 - 35.5 FROM dual;
++-----+---------+---------+----------+--------------+------------+------------+
+| 100 | 100 + 0 | 100 - 0 | 100 + 50 | 100 + 50 -30 | 100 + 35.5 | 100 - 35.5 |
++-----+---------+---------+----------+--------------+------------+------------+
+| 100 |     100 |     100 |      150 |          120 |      135.5 |       64.5 |
++-----+---------+---------+----------+--------------+------------+------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由运算结果可以得出如下结论：</p>
+<blockquote>
+<ul>
+<li>一个整数类型的值对整数进行加法和减法操作，结果还是一个整数；</li>
+<li>一个整数类型的值对浮点数进行加法和减法操作，结果是一个浮点数；</li>
+<li>加法和减法的优先级相同，进行先加后减操作与进行先减后加操作的结果是一样的；</li>
+<li>在Java中，+的左右两边如果有字符串，那么表示字符串的拼接。但是在MySQL中+只表示数值相加。如果遇到非数值类型，先尝试转成数值，如果转失败，就按0计算。（补充：MySQL中字符串拼接要使用字符串函数CONCAT()实现）</li>
+</ul>
+</blockquote>
+<p><strong>2．乘法与除法运算符</strong></p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 100, 100 * 1, 100 * 1.0, 100 &#x2F; 1.0, 100 &#x2F; 2,100 + 2 * 5 &#x2F; 2,100 &#x2F;3, 100 DIV 0 FROM dual;
++-----+---------+-----------+-----------+---------+-----------------+---------+-----------+
+| 100 | 100 * 1 | 100 * 1.0 | 100 &#x2F; 1.0 | 100 &#x2F; 2 | 100 + 2 * 5 &#x2F; 2 | 100 &#x2F;3  | 100 DIV 0 |
++-----+---------+-----------+-----------+---------+-----------------+---------+-----------+
+| 100 |     100 |     100.0 |  100.0000 | 50.0000 |        105.0000 | 33.3333 |      NULL |
++-----+---------+-----------+-----------+---------+-----------------+---------+-----------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#计算出员工的年基本工资
+SELECT employee_id,salary,salary * 12 annual_sal 
+FROM employees;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>由运算结果可以得出如下结论：</p>
+<blockquote>
+<ul>
+<li>一个数乘以整数1和除以整数1后仍得原数；</li>
+<li>一个数乘以浮点数1和除以浮点数1后变成浮点数，数值与原数相等；</li>
+<li>一个数除以整数后，不管是否能除尽，结果都为一个浮点数；</li>
+<li>一个数除以另一个数，除不尽时，结果为一个浮点数，并保留到小数点后4位；</li>
+<li>乘法和除法的优先级相同，进行先乘后除操作与先除后乘操作，得出的结果相同。</li>
+<li>在数学运算中，0不能用作除数，在MySQL中，一个数除以0为NULL。</li>
+</ul>
+</blockquote>
+<p><strong>3．求模（求余）运算符</strong><br>将t22表中的字段i对3和5进行求模（求余）运算。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 12 % 3, 12 MOD 5 FROM dual;
++--------+----------+
+| 12 % 3 | 12 MOD 5 |
++--------+----------+
+|      0 |        2 |
++--------+----------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#筛选出employee_id是偶数的员工
+SELECT * FROM employees
+WHERE employee_id MOD 2 &#x3D; 0;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到，100对3求模后的结果为3，对5求模后的结果为0。</p>
+<h2 id="2-比较运算符"><a href="#2-比较运算符" class="headerlink" title="2. 比较运算符"></a>2. 比较运算符</h2><p>比较运算符用来对表达式左边的操作数和右边的操作数进行比较，比较的结果为真则返回1，比较的结果为假则返回0，其他情况则返回NULL。</p>
+<p>比较运算符经常被用来作为SELECT查询语句的条件来使用，返回符合条件的结果记录。</p>
+<img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source\_posts\images\image-20211012101110021.png" alt="image-20211012101110021">
+
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012104955094.png" alt="image-20211012104955094"></p>
+<p><strong>1．等号运算符</strong></p>
+<ul>
+<li><p>等号运算符（=）判断等号两边的值、字符串或表达式是否相等，如果相等则返回1，不相等则返回0。</p>
+</li>
+<li><p>在使用等号运算符时，遵循如下规则：</p>
+<ul>
+<li>如果等号两边的值、字符串或表达式都为字符串，则MySQL会按照字符串进行比较，其比较的是每个字符串中字符的ANSI编码是否相等。</li>
+<li>如果等号两边的值都是整数，则MySQL会按照整数来比较两个值的大小。</li>
+<li>如果等号两边的值一个是整数，另一个是字符串，则MySQL会将字符串转化为数字进行比较。</li>
+<li>如果等号两边的值、字符串或表达式中有一个为NULL，则比较结果为NULL。</li>
+</ul>
+</li>
+<li><p>对比：SQL中赋值符号使用 := </p>
+</li>
+</ul>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 &#x3D; 1, 1 &#x3D; &#39;1&#39;, 1 &#x3D; 0, &#39;a&#39; &#x3D; &#39;a&#39;, (5 + 3) &#x3D; (2 + 6), &#39;&#39; &#x3D; NULL , NULL &#x3D; NULL; 
++-------+---------+-------+-----------+-------------------+-----------+-------------+
+| 1 &#x3D; 1 | 1 &#x3D; &#39;1&#39; | 1 &#x3D; 0 | &#39;a&#39; &#x3D; &#39;a&#39; | (5 + 3) &#x3D; (2 + 6) | &#39;&#39; &#x3D; NULL | NULL &#x3D; NULL |
++-------+---------+-------+-----------+-------------------+-----------+-------------+
+|    1  |     1   |   0   |      1    |             1     |    NULL   |        NULL  |
++-------+---------+-------+-----------+-------------------+-----------+-------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 &#x3D; 2, 0 &#x3D; &#39;abc&#39;, 1 &#x3D; &#39;abc&#39; FROM dual;
++-------+-----------+-----------+
+| 1 &#x3D; 2 | 0 &#x3D; &#39;abc&#39; | 1 &#x3D; &#39;abc&#39; |
++-------+-----------+-----------+
+|     0 |         1 |         0 |
++-------+-----------+-----------+
+1 row in set, 2 warnings (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询salary&#x3D;10000，注意在Java中比较是&#x3D;&#x3D;
+SELECT employee_id,salary FROM employees WHERE salary &#x3D; 10000;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>2．安全等于运算符</strong><br>安全等于运算符（&lt;=&gt;）与等于运算符（=）的作用是相似的，<code>唯一的区别</code>是‘&lt;=&gt;’可以用来对NULL进行判断。在两个操作数均为NULL时，其返回值为1，而不为NULL；当一个操作数为NULL时，其返回值为0，而不为NULL。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 &lt;&#x3D;&gt; &#39;1&#39;, 1 &lt;&#x3D;&gt; 0, &#39;a&#39; &lt;&#x3D;&gt; &#39;a&#39;, (5 + 3) &lt;&#x3D;&gt; (2 + 6), &#39;&#39; &lt;&#x3D;&gt; NULL,NULL &lt;&#x3D;&gt; NULL FROM dual;
++-----------+---------+-------------+---------------------+-------------+---------------+
+| 1 &lt;&#x3D;&gt; &#39;1&#39; | 1 &lt;&#x3D;&gt; 0 | &#39;a&#39; &lt;&#x3D;&gt; &#39;a&#39; | (5 + 3) &lt;&#x3D;&gt; (2 + 6) | &#39;&#39; &lt;&#x3D;&gt; NULL | NULL &lt;&#x3D;&gt; NULL |
++-----------+---------+-------------+---------------------+-------------+---------------+
+|         1 |       0 |           1 |                   1 |           0 |             1 |
++-----------+---------+-------------+---------------------+-------------+---------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询commission_pct等于0.40
+SELECT employee_id,commission_pct FROM employees WHERE commission_pct &#x3D; 0.40;
+
+SELECT employee_id,commission_pct FROM employees WHERE commission_pct &lt;&#x3D;&gt; 0.40;
+
+#如果把0.40改成 NULL 呢？<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以看到，使用安全等于运算符时，两边的操作数的值都为NULL时，返回的结果为1而不是NULL，其他返回结果与等于运算符相同。</p>
+<p><strong>3．不等于运算符</strong><br>不等于运算符（&lt;&gt;和!=）用于判断两边的数字、字符串或者表达式的值是否不相等，如果不相等则返回1，相等则返回0。不等于运算符不能判断NULL值。如果两边的值有任意一个为NULL，或两边都为NULL，则结果为NULL。<br>SQL语句示例如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 &lt;&gt; 1, 1 !&#x3D; 2, &#39;a&#39; !&#x3D; &#39;b&#39;, (3+4) &lt;&gt; (2+6), &#39;a&#39; !&#x3D; NULL, NULL &lt;&gt; NULL; 
++--------+--------+------------+----------------+-------------+--------------+
+| 1 &lt;&gt; 1 | 1 !&#x3D; 2 | &#39;a&#39; !&#x3D; &#39;b&#39; | (3+4) &lt;&gt; (2+6) | &#39;a&#39; !&#x3D; NULL | NULL &lt;&gt; NULL |
++--------+--------+------------+----------------+-------------+--------------+
+|      0 |   1    |       1    |            1   |     NULL    |         NULL |
++--------+--------+------------+----------------+-------------+--------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>此外，还有非符号类型的运算符：</p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012105303219.png" alt="image-20211012105303219"></p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012105030527.png" alt="image-20211012105030527"></p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012105052456.png" alt="image-20211012105052456"></p>
+<p><strong>4. 空运算符</strong><br>空运算符（IS NULL或者ISNULL）判断一个值是否为NULL，如果为NULL则返回1，否则返回0。<br>SQL语句示例如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT NULL IS NULL, ISNULL(NULL), ISNULL(&#39;a&#39;), 1 IS NULL;
++--------------+--------------+-------------+-----------+
+| NULL IS NULL | ISNULL(NULL) | ISNULL(&#39;a&#39;) | 1 IS NULL |
++--------------+--------------+-------------+-----------+
+|            1 |            1 |           0 |         0 |
++--------------+--------------+-------------+-----------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询commission_pct等于NULL。比较如下的四种写法
+SELECT employee_id,commission_pct FROM employees WHERE commission_pct IS NULL;
+SELECT employee_id,commission_pct FROM employees WHERE commission_pct &lt;&#x3D;&gt; NULL;
+SELECT employee_id,commission_pct FROM employees WHERE ISNULL(commission_pct);
+SELECT employee_id,commission_pct FROM employees WHERE commission_pct &#x3D; NULL;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT last_name, manager_id
+FROM   employees
+WHERE  manager_id IS NULL;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>5. 非空运算符</strong><br>非空运算符（IS NOT NULL）判断一个值是否不为NULL，如果不为NULL则返回1，否则返回0。<br>SQL语句示例如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT NULL IS NOT NULL, &#39;a&#39; IS NOT NULL,  1 IS NOT NULL; 
++------------------+-----------------+---------------+
+| NULL IS NOT NULL | &#39;a&#39; IS NOT NULL | 1 IS NOT NULL |
++------------------+-----------------+---------------+
+|                0 |               1 |             1 |
++------------------+-----------------+---------------+
+1 row in set (0.01 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询commission_pct不等于NULL
+SELECT employee_id,commission_pct FROM employees WHERE commission_pct IS NOT NULL;
+SELECT employee_id,commission_pct FROM employees WHERE NOT commission_pct &lt;&#x3D;&gt; NULL;
+SELECT employee_id,commission_pct FROM employees WHERE NOT ISNULL(commission_pct);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>6. 最小值运算符</strong><br>语法格式为：LEAST(值1，值2，…，值n)。其中，“值n”表示参数列表中有n个值。在有两个或多个参数的情况下，返回最小值。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT LEAST (1,0,2), LEAST(&#39;b&#39;,&#39;a&#39;,&#39;c&#39;), LEAST(1,NULL,2);
++---------------+--------------------+-----------------+
+| LEAST (1,0,2) | LEAST(&#39;b&#39;,&#39;a&#39;,&#39;c&#39;) | LEAST(1,NULL,2) |
++---------------+--------------------+-----------------+
+|       0       |        a           |      NULL       |
++---------------+--------------------+-----------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由结果可以看到，当参数是整数或者浮点数时，LEAST将返回其中最小的值；当参数为字符串时，返回字母表中顺序最靠前的字符；当比较值列表中有NULL时，不能判断大小，返回值为NULL。</p>
+<p><strong>7. 最大值运算符</strong><br>语法格式为：GREATEST(值1，值2，…，值n)。其中，n表示参数列表中有n个值。当有两个或多个参数时，返回值为最大值。假如任意一个自变量为NULL，则GREATEST()的返回值为NULL。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT GREATEST(1,0,2), GREATEST(&#39;b&#39;,&#39;a&#39;,&#39;c&#39;), GREATEST(1,NULL,2);
++-----------------+-----------------------+--------------------+
+| GREATEST(1,0,2) | GREATEST(&#39;b&#39;,&#39;a&#39;,&#39;c&#39;) | GREATEST(1,NULL,2) |
++-----------------+-----------------------+--------------------+
+|               2 | c                     |               NULL |
++-----------------+-----------------------+--------------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由结果可以看到，当参数中是整数或者浮点数时，GREATEST将返回其中最大的值；当参数为字符串时，返回字母表中顺序最靠后的字符；当比较值列表中有NULL时，不能判断大小，返回值为NULL。</p>
+<p><strong>8. BETWEEN AND运算符</strong><br>BETWEEN运算符使用的格式通常为SELECT D FROM TABLE WHERE C BETWEEN A AND B，此时，当C大于或等于A，并且C小于或等于B时，结果为1，否则结果为0。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 BETWEEN 0 AND 1, 10 BETWEEN 11 AND 12, &#39;b&#39; BETWEEN &#39;a&#39; AND &#39;c&#39;;
++-------------------+----------------------+-------------------------+
+| 1 BETWEEN 0 AND 1 | 10 BETWEEN 11 AND 12 | &#39;b&#39; BETWEEN &#39;a&#39; AND &#39;c&#39; |
++-------------------+----------------------+-------------------------+
+|                 1 |                    0 |                       1 |
++-------------------+----------------------+-------------------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT last_name, salary
+FROM   employees
+WHERE  salary BETWEEN 2500 AND 3500;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>9. IN运算符</strong><br>IN运算符用于判断给定的值是否是IN列表中的一个值，如果是则返回1，否则返回0。如果给定的值为NULL，或者IN列表中存在NULL，则结果为NULL。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT &#39;a&#39; IN (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;), 1 IN (2,3), NULL IN (&#39;a&#39;,&#39;b&#39;), &#39;a&#39; IN (&#39;a&#39;, NULL);
++----------------------+------------+-------------------+--------------------+
+| &#39;a&#39; IN (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;) | 1 IN (2,3) | NULL IN (&#39;a&#39;,&#39;b&#39;) | &#39;a&#39; IN (&#39;a&#39;, NULL) |
++----------------------+------------+-------------------+--------------------+
+|            1         |        0   |         NULL      |         1          |
++----------------------+------------+-------------------+--------------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT employee_id, last_name, salary, manager_id
+FROM   employees
+WHERE  manager_id IN (100, 101, 201);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>10. NOT IN运算符</strong><br>NOT IN运算符用于判断给定的值是否不是IN列表中的一个值，如果不是IN列表中的一个值，则返回1，否则返回0。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT &#39;a&#39; NOT IN (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;), 1 NOT IN (2,3);
++--------------------------+----------------+
+| &#39;a&#39; NOT IN (&#39;a&#39;,&#39;b&#39;,&#39;c&#39;) | 1 NOT IN (2,3) |
++--------------------------+----------------+
+|                 0        |            1   |
++--------------------------+----------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>11. LIKE运算符</strong><br>LIKE运算符主要用来匹配字符串，通常用于模糊匹配，如果满足条件则返回1，否则返回0。如果给定的值或者匹配条件为NULL，则返回结果为NULL。</p>
+<p>LIKE运算符通常使用如下通配符：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">“%”：匹配0个或多个字符。
+“_”：只能匹配一个字符。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>SQL语句示例如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT NULL LIKE &#39;abc&#39;, &#39;abc&#39; LIKE NULL;  
++-----------------+-----------------+
+| NULL LIKE &#39;abc&#39; | &#39;abc&#39; LIKE NULL |
++-----------------+-----------------+
+|          NULL   |          NULL   |
++-----------------+-----------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT	first_name
+FROM 	employees
+WHERE	first_name LIKE &#39;S%&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT last_name
+FROM   employees
+WHERE  last_name LIKE &#39;_o%&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>ESCAPE</strong></p>
+<ul>
+<li>回避特殊符号的：<strong>使用转义符</strong>。例如：将[%]转为[$%]、[]转为[$]，然后再加上[ESCAPE‘$’]即可。</li>
+</ul>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT job_id
+FROM   jobs
+WHERE  job_id LIKE ‘IT\_%‘;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>如果使用\表示转义，要省略ESCAPE。如果不是\，则要加上ESCAPE。</li>
+</ul>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT job_id
+FROM   jobs
+WHERE  job_id LIKE ‘IT$_%‘ escape ‘$‘;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>12. REGEXP运算符</strong></p>
+<p>REGEXP运算符用来匹配字符串，语法格式为：<code>expr REGEXP 匹配条件</code>。如果expr满足匹配条件，返回1；如果不满足，则返回0。若expr或匹配条件任意一个为NULL，则结果为NULL。</p>
+<p>REGEXP运算符在进行匹配时，常用的有下面几种通配符：</p>
+<pre class="line-numbers language-none"><code class="language-none">（1）‘^’匹配以该字符后面的字符开头的字符串。
+（2）‘$’匹配以该字符前面的字符结尾的字符串。
+（3）‘.’匹配任何一个单字符。
+（4）“[...]”匹配在方括号内的任何字符。例如，“[abc]”匹配“a”或“b”或“c”。为了命名字符的范围，使用一个‘-’。“[a-z]”匹配任何字母，而“[0-9]”匹配任何数字。
+（5）‘*’匹配零个或多个在它前面的字符。例如，“x*”匹配任何数量的‘x’字符，“[0-9]*”匹配任何数量的数字，而“*”匹配任何数量的任何字符。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>SQL语句示例如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT &#39;shkstart&#39; REGEXP &#39;^s&#39;, &#39;shkstart&#39; REGEXP &#39;t$&#39;, &#39;shkstart&#39; REGEXP &#39;hk&#39;;
++------------------------+------------------------+-------------------------+
+| &#39;shkstart&#39; REGEXP &#39;^s&#39; | &#39;shkstart&#39; REGEXP &#39;t$&#39; | &#39;shkstart&#39; REGEXP &#39;hk&#39;  |
++------------------------+------------------------+-------------------------+
+|                      1 |                      1 |                       1 |
++------------------------+------------------------+-------------------------+
+1 row in set (0.01 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT &#39;atguigu&#39; REGEXP &#39;gu.gu&#39;, &#39;atguigu&#39; REGEXP &#39;[ab]&#39;;
++--------------------------+-------------------------+
+| &#39;atguigu&#39; REGEXP &#39;gu.gu&#39; | &#39;atguigu&#39; REGEXP &#39;[ab]&#39; |
++--------------------------+-------------------------+
+|                        1 |                       1 |
++--------------------------+-------------------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3. 逻辑运算符"></a>3. 逻辑运算符</h2><p>逻辑运算符主要用来判断表达式的真假，在MySQL中，逻辑运算符的返回结果为1、0或者NULL。</p>
+<p>MySQL中支持4种逻辑运算符如下：</p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012110241418.png" alt="image-20211012110241418"></p>
+<p><strong>1．逻辑非运算符</strong><br>逻辑非（NOT或!）运算符表示当给定的值为0时返回1；当给定的值为非0值时返回0；当给定的值为NULL时，返回NULL。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT NOT 1, NOT 0, NOT(1+1), NOT !1, NOT NULL;    
++-------+-------+----------+--------+----------+
+| NOT 1 | NOT 0 | NOT(1+1) | NOT !1 | NOT NULL |
++-------+-------+----------+--------+----------+
+|     0 |     1 |        0 |      1 |     NULL |
++-------+-------+----------+--------+----------+
+1 row in set, 1 warning (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT last_name, job_id
+FROM   employees
+WHERE  job_id NOT IN (&#39;IT_PROG&#39;, &#39;ST_CLERK&#39;, &#39;SA_REP&#39;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>2．逻辑与运算符</strong><br>逻辑与（AND或&amp;&amp;）运算符是当给定的所有值均为非0值，并且都不为NULL时，返回1；当给定的一个值或者多个值为0时则返回0；否则返回NULL。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 AND -1, 0 AND 1, 0 AND NULL, 1 AND NULL;
++----------+---------+------------+------------+
+| 1 AND -1 | 0 AND 1 | 0 AND NULL | 1 AND NULL |
++----------+---------+------------+------------+
+|        1 |       0 |          0 |       NULL |
++----------+---------+------------+------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT employee_id, last_name, job_id, salary
+FROM   employees
+WHERE  salary &gt;&#x3D;10000
+AND    job_id LIKE &#39;%MAN%&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>3．逻辑或运算符</strong><br>逻辑或（OR或||）运算符是当给定的值都不为NULL，并且任何一个值为非0值时，则返回1，否则返回0；当一个值为NULL，并且另一个值为非0值时，返回1，否则返回NULL；当两个值都为NULL时，返回NULL。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 OR -1, 1 OR 0, 1 OR NULL, 0 || NULL, NULL || NULL;     
++---------+--------+-----------+-----------+--------------+
+| 1 OR -1 | 1 OR 0 | 1 OR NULL | 0 || NULL | NULL || NULL |
++---------+--------+-----------+-----------+--------------+
+|       1 |      1 |         1 |    NULL   |       NULL   |
++---------+--------+-----------+-----------+--------------+
+1 row in set, 2 warnings (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">#查询基本薪资不在9000-12000之间的员工编号和基本薪资
+SELECT employee_id,salary FROM employees 
+WHERE NOT (salary &gt;&#x3D; 9000 AND salary &lt;&#x3D; 12000);
+
+SELECT employee_id,salary FROM employees 
+WHERE salary &lt;9000 OR salary &gt; 12000;
+
+SELECT employee_id,salary FROM employees 
+WHERE salary NOT BETWEEN 9000 AND 12000;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">SELECT employee_id, last_name, job_id, salary
+FROM   employees
+WHERE  salary &gt;&#x3D; 10000
+OR     job_id LIKE &#39;%MAN%&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p>注意：</p>
+<p>OR可以和AND一起使用，但是在使用时要注意两者的优先级，由于AND的优先级高于OR，因此先对AND两边的操作数进行操作，再与OR中的操作数结合。</p>
+</blockquote>
+<p><strong>4．逻辑异或运算符</strong><br>逻辑异或（XOR）运算符是当给定的值中任意一个值为NULL时，则返回NULL；如果两个非NULL的值都是0或者都不等于0时，则返回0；如果一个值为0，另一个值不为0时，则返回1。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 XOR -1, 1 XOR 0, 0 XOR 0, 1 XOR NULL, 1 XOR 1 XOR 1, 0 XOR 0 XOR 0;
++----------+---------+---------+------------+---------------+---------------+
+| 1 XOR -1 | 1 XOR 0 | 0 XOR 0 | 1 XOR NULL | 1 XOR 1 XOR 1 | 0 XOR 0 XOR 0 |
++----------+---------+---------+------------+---------------+---------------+
+|        0 |       1 |       0 |       NULL |             1 |             0 |
++----------+---------+---------+------------+---------------+---------------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select last_name,department_id,salary 
+from employees
+where department_id in (10,20) XOR salary &gt; 8000;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4-位运算符"><a href="#4-位运算符" class="headerlink" title="4. 位运算符"></a>4. 位运算符</h2><p>位运算符是在二进制数上进行计算的运算符。位运算符会先将操作数变成二进制数，然后进行位运算，最后将计算结果从二进制变回十进制数。</p>
+<p>MySQL支持的位运算符如下：</p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012110511223.png" alt="image-20211012110511223"></p>
+<p><strong>1．按位与运算符</strong><br>按位与（&amp;）运算符将给定值对应的二进制数逐位进行逻辑与运算。当给定值对应的二进制位的数值都为1时，则该位返回1，否则返回0。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 &amp; 10, 20 &amp; 30;
++--------+---------+
+| 1 &amp; 10 | 20 &amp; 30 |
++--------+---------+
+|      0 |      20 |
++--------+---------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1的二进制数为0001，10的二进制数为1010，所以1 &amp; 10的结果为0000，对应的十进制数为0。20的二进制数为10100，30的二进制数为11110，所以20 &amp; 30的结果为10100，对应的十进制数为20。</p>
+<p><strong>2. 按位或运算符</strong><br>按位或（|）运算符将给定的值对应的二进制数逐位进行逻辑或运算。当给定值对应的二进制位的数值有一个或两个为1时，则该位返回1，否则返回0。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 | 10, 20 | 30; 
++--------+---------+
+| 1 | 10 | 20 | 30 |
++--------+---------+
+|     11 |      30 |
++--------+---------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1的二进制数为0001，10的二进制数为1010，所以1 | 10的结果为1011，对应的十进制数为11。20的二进制数为10100，30的二进制数为11110，所以20 | 30的结果为11110，对应的十进制数为30。</p>
+<p><strong>3. 按位异或运算符</strong><br>按位异或（^）运算符将给定的值对应的二进制数逐位进行逻辑异或运算。当给定值对应的二进制位的数值不同时，则该位返回1，否则返回0。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 ^ 10, 20 ^ 30; 
++--------+---------+
+| 1 ^ 10 | 20 ^ 30 |
++--------+---------+
+|     11 |      10 |
++--------+---------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1的二进制数为0001，10的二进制数为1010，所以1 ^ 10的结果为1011，对应的十进制数为11。20的二进制数为10100，30的二进制数为11110，所以20 ^ 30的结果为01010，对应的十进制数为10。</p>
+<p>再举例：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 12 &amp; 5, 12 | 5,12 ^ 5 FROM DUAL;
++--------+--------+--------+
+| 12 &amp; 5 | 12 | 5 | 12 ^ 5 |
++--------+--------+--------+
+|      4 |     13 |      9 |
++--------+--------+--------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source\_posts\images\image-20211023115738415.png" alt="image-20211023115738415" style="zoom:80%;">
+
+<p><strong>4. 按位取反运算符</strong><br>按位取反（~）运算符将给定的值的二进制数逐位进行取反操作，即将1变为0，将0变为1。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 10 &amp; ~1;
++---------+
+| 10 &amp; ~1 |
++---------+
+|      10 |
++---------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>由于按位取反（~）运算符的优先级高于按位与（&amp;）运算符的优先级，所以10 &amp; ~1，首先，对数字1进行按位取反操作，结果除了最低位为0，其他位都为1，然后与10进行按位与操作，结果为10。</p>
+<p><strong>5. 按位右移运算符</strong><br>按位右移（&gt;&gt;）运算符将给定的值的二进制数的所有位右移指定的位数。右移指定的位数后，右边低位的数值被移出并丢弃，左边高位空出的位置用0补齐。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 &gt;&gt; 2, 4 &gt;&gt; 2;
++--------+--------+
+| 1 &gt;&gt; 2 | 4 &gt;&gt; 2 |
++--------+--------+
+|      0 |      1 |
++--------+--------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1的二进制数为0000 0001，右移2位为0000 0000，对应的十进制数为0。4的二进制数为0000 0100，右移2位为0000 0001，对应的十进制数为1。</p>
+<p><strong>6. 按位左移运算符</strong><br>按位左移（&lt;&lt;）运算符将给定的值的二进制数的所有位左移指定的位数。左移指定的位数后，左边高位的数值被移出并丢弃，右边低位空出的位置用0补齐。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT 1 &lt;&lt; 2, 4 &lt;&lt; 2;  
++--------+--------+
+| 1 &lt;&lt; 2 | 4 &lt;&lt; 2 |
++--------+--------+
+|      4 |     16 |
++--------+--------+
+1 row in set (0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>1的二进制数为0000 0001，左移两位为0000 0100，对应的十进制数为4。4的二进制数为0000 0100，左移两位为0001 0000，对应的十进制数为16。</p>
+<h2 id="5-运算符的优先级"><a href="#5-运算符的优先级" class="headerlink" title="5. 运算符的优先级"></a>5. 运算符的优先级</h2><p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012111042395.png" alt="image-20211012111042395"></p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20211012110731059.png" alt="image-20211012110731059"></p>
+<p>数字编号越大，优先级越高，优先级高的运算符先进行计算。可以看到，赋值运算符的优先级最低，使用“()”括起来的表达式的优先级最高。</p>
+<h2 id="拓展：使用正则表达式查询"><a href="#拓展：使用正则表达式查询" class="headerlink" title="拓展：使用正则表达式查询"></a>拓展：使用正则表达式查询</h2><p>正则表达式通常被用来检索或替换那些符合某个模式的文本内容，根据指定的匹配模式匹配文本中符合要求的特殊字符串。例如，从一个文本文件中提取电话号码，查找一篇文章中重复的单词或者替换用户输入的某些敏感词语等，这些地方都可以使用正则表达式。正则表达式强大而且灵活，可以应用于非常复杂的查询。</p>
+<p>MySQL中使用REGEXP关键字指定正则表达式的字符匹配模式。下表列出了REGEXP操作符中常用字符匹配列表。</p>
+<p><img src="/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/blog\source_posts\images\image-20210926151249943.png" alt="image-20210926151249943"></p>
+<p><strong>1. 查询以特定字符或字符串开头的记录</strong><br>字符‘^’匹配以特定字符或者字符串开头的文本。</p>
+<p>在fruits表中，查询f_name字段以字母‘b’开头的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;^b&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>2. 查询以特定字符或字符串结尾的记录</strong><br>字符‘$’匹配以特定字符或者字符串结尾的文本。</p>
+<p>在fruits表中，查询f_name字段以字母‘y’结尾的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;y$&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>3. 用符号”.”来替代字符串中的任意一个字符</strong><br>字符‘.’匹配任意一个字符。<br>在fruits表中，查询f_name字段值包含字母‘a’与‘g’且两个字母之间只有一个字母的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;a.g&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>4. 使用”*”和”+”来匹配多个字符</strong><br>星号‘*’匹配前面的字符任意多次，包括0次。加号‘+’匹配前面的字符至少一次。</p>
+<p>在fruits表中，查询f_name字段值以字母‘b’开头且‘b’后面出现字母‘a’的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;^ba*&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在fruits表中，查询f_name字段值以字母‘b’开头且‘b’后面出现字母‘a’至少一次的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;^ba+&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>5. 匹配指定字符串</strong><br>正则表达式可以匹配指定字符串，只要这个字符串在查询文本中即可，如要匹配多个字符串，多个字符串之间使用分隔符‘|’隔开。</p>
+<p>在fruits表中，查询f_name字段值包含字符串“on”的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;on&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在fruits表中，查询f_name字段值包含字符串“on”或者“ap”的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;on|ap&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>之前介绍过，LIKE运算符也可以匹配指定的字符串，但与REGEXP不同，LIKE匹配的字符串如果在文本中间出现，则找不到它，相应的行也不会返回。REGEXP在文本内进行匹配，如果被匹配的字符串在文本中出现，REGEXP将会找到它，相应的行也会被返回。对比结果如下所示。</p>
+<p>在fruits表中，使用LIKE运算符查询f_name字段值为“on”的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name like &#39;on&#39;;
+Empty set(0.00 sec)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>6. 匹配指定字符中的任意一个</strong><br>方括号“[]”指定一个字符集合，只匹配其中任何一个字符，即为所查找的文本。</p>
+<p>在fruits表中，查找f_name字段中包含字母‘o’或者‘t’的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;[ot]&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在fruits表中，查询s_id字段中包含4、5或者6的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE s_id REGEXP &#39;[456]&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>7. 匹配指定字符以外的字符</strong><br><code>“[^字符集合]”</code>匹配不在指定集合中的任何字符。</p>
+<p>在fruits表中，查询f_id字段中包含字母a<del>e和数字1</del>2以外字符的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_id REGEXP &#39;[^a-e1-2]&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>8. 使用{n,}或者{n,m}来指定字符串连续出现的次数</strong><br>“字符串{n,}”表示至少匹配n次前面的字符；“字符串{n,m}”表示匹配前面的字符串不少于n次，不多于m次。例如，a{2,}表示字母a连续出现至少2次，也可以大于2次；a{2,4}表示字母a连续出现最少2次，最多不能超过4次。</p>
+<p>在fruits表中，查询f_name字段值出现字母‘x’至少2次的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;x&#123;2,&#125;&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>在fruits表中，查询f_name字段值出现字符串“ba”最少1次、最多3次的记录，SQL语句如下：</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">mysql&gt; SELECT * FROM fruits WHERE f_name REGEXP &#39;ba&#123;1,3&#125;&#39;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/key-wu_ljm/about" rel="external nofollow noreferrer">KeyWu</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://keywu-ljm.gitee.io/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/">https://keywu-ljm.gitee.io/key-wu_ljm/key-wu_ljm/2021/11/26/%E8%BF%90%E7%AE%97%E7%AC%A6/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/key-wu_ljm/about" target="_blank">KeyWu</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/key-wu_ljm/tags/MySQL/">
+                                    <span class="chip bg-color">MySQL</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/key-wu_ljm/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/key-wu_ljm/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/key-wu_ljm/2021/11/26/%E6%8E%92%E5%BA%8F%E4%B8%8E%E5%88%86%E9%A1%B5/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/key-wu_ljm/medias/featureimages/6.jpg" class="responsive-img" alt="排序与分页">
+                        
+                        <span class="card-title">排序与分页</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-26
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            KeyWu
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/key-wu_ljm/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/key-wu_ljm/2021/11/26/%E5%9F%BA%E6%9C%AC%E7%9A%84SELECT%E8%AF%AD%E5%8F%A5/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/key-wu_ljm/medias/featureimages/11.jpg" class="responsive-img" alt="第三章基本的SELECT语句">
+                        
+                        <span class="card-title">第三章基本的SELECT语句</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            KeyWu
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/key-wu_ljm/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/key-wu_ljm/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/key-wu_ljm/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/key-wu_ljm/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/key-wu_ljm/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/key-wu_ljm/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <a href="/key-wu_ljm/about" target="_blank">KeyWu</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">102.5k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2021";
+                        var startMonth = "11";
+                        var startDate = "1";
+                        var startHour = "1";
+                        var startMinute = "12";
+                        var startSecond = "20";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+                <span id="icp"><img src="/key-wu_ljm/medias/icp.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="/key-wu_ljm/null" target="_blank">暂时还没有哦# 备案信息</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/KeyWu" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:wk3263407540@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3263407540" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3263407540" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/key-wu_ljm/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/key-wu_ljm/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/key-wu_ljm/libs/materialize/materialize.min.js"></script>
+    <script src="/key-wu_ljm/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/key-wu_ljm/libs/aos/aos.js"></script>
+    <script src="/key-wu_ljm/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/key-wu_ljm/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/key-wu_ljm/js/matery.js"></script>
+
+    
+
+    
+        
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/key-wu_ljm/libs/others/sakura.js"><\/script>');
+            }
+        </script>
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/key-wu_ljm/"><\/script>');
+            }
+        </script>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/key-wu_ljm/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/key-wu_ljm/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
