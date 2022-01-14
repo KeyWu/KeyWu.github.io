@@ -231,7 +231,3 @@ pre[class*="language-"].line-numbers > code {
 	text-align: right;
 	height: 100%;
 }
-code[class*="language-"], pre[class*="language-"] {
-	white-space: pre !important;
-  }
-  

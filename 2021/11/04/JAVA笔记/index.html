@@ -21,7 +21,7 @@ add">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JAVA笔记 | KeyWu的世界</title>
+    <title>JAVA笔记 | KeyWu</title>
     <link rel="icon" type="image/png" href="/key-wu_ljm/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/key-wu_ljm/libs/awesome/css/all.min.css">
@@ -32,7 +32,7 @@ add">
     <link rel="stylesheet" type="text/css" href="/key-wu_ljm/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/key-wu_ljm/css/my.css">
 
-    <script src="/key-wu_ljm/libs/jquery/jquery.min.js"></script>
+    <script src="/key-wu_ljm/libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 5.4.0"></head>
 
@@ -48,7 +48,7 @@ add">
                     
                     <img src="/key-wu_ljm/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">KeyWu的世界</span>
+                    <span class="logo-span">KeyWu</span>
                 </a>
             </div>
             
@@ -147,7 +147,7 @@ add">
         
         <img src="/key-wu_ljm/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">KeyWu的世界</div>
+        <div class="logo-name">KeyWu</div>
         <div class="logo-desc">
             
             吴楷的个人笔记，日常记录
@@ -313,7 +313,7 @@ add">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/key-wu_ljm/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/key-wu_ljm/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,21 +466,21 @@ add">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-01-11
+                    2022-01-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    11 分
                 </div>
                 
 
@@ -500,16 +500,11 @@ add">
         
 
         
-        <!-- 代码块折行 -->
-        <style type="text/css">
-            code[class*="language-"], pre[class*="language-"] { white-space: pre-wrap !important; }
-        </style>
-        
 
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="JAVA-API"><a href="#JAVA-API" class="headerlink" title="JAVA API"></a>JAVA API</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/manual/jdk11api/index.html">JAVA-API</a></p>
-<h4 id="JAVA队列"><a href="#JAVA队列" class="headerlink" title="JAVA队列"></a>JAVA队列</h4><p>Queue接口继承了Collection接口。LinkedList实现了Queue接口。队列先进先出</p>
+<h3 id="JAVA队列"><a href="#JAVA队列" class="headerlink" title="JAVA队列"></a>JAVA队列</h3><p>Queue接口继承了Collection接口。LinkedList实现了Queue接口。队列先进先出</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Queue</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>add方法增加一个元素，若队列已满，则抛出一个异常。</p>
@@ -520,7 +515,18 @@ add">
 <p>peek 返回队列头部的元素</p>
 <p>put 添加一个元素</p>
 <p>take 移除并返回队列头部的元素.</p>
-<h4 id="JAVA栈"><a href="#JAVA栈" class="headerlink" title="JAVA栈"></a>JAVA栈</h4><p>栈后进先出</p>
+<h4 id="java的PriorityQueue"><a href="#java的PriorityQueue" class="headerlink" title="java的PriorityQueue"></a>java的PriorityQueue</h4><p>​    基于优先级堆的无界优先级队列。 优先级队列的元素根据其自然顺序或在队列构建时提供的Comparator进行排序，具体取决于使用的构造函数。 优先级队列不允许null元素。 依赖于自然排序的优先级队列也不允许插入不可比较的对象（这样做可能会导致ClassCastException ）。<br>​    此队列的头部是相对于指定排序的最小元素。 如果多个元素以最低值绑定，则头部是这些元素之一——绑定被任意打破。 队列检索操作poll 、 remove 、 peek和element访问队列头部的元素。<br>​    优先级队列是无界的，但具有控制用于存储队列元素的数组大小的内部容量。 它总是至少与队列大小一样大。 随着元素被添加到优先级队列中，其容量会自动增长。 增长政策的细节没有具体说明。<br>​    此类及其迭代器实现了Collection和Iterator接口的所有可选方法。 方法iterator()中提供的 Iterator 和方法spliterator()中提供的 Spliterator不能保证以任何特定顺序遍历优先级队列的元素。 如果您需要有序遍历，请考虑使用Arrays.sort(pq.toArray()) 。请注意，此实现不同步。 如果任何线程修改队列，则多个线程不应同时访问PriorityQueue实例。 相反，使用线程安全的java.util.concurrent.PriorityBlockingQueue类。<br>​    实现说明：此实现为<strong>入队</strong>和<strong>出队</strong>方法（ offer 、 poll 、 remove()和add ）提供 <strong>O(log(n))</strong> 时基于优先级堆的无界优先级队列。 优先级队列的元素根据其自然顺序或在队列构建时提供的<strong>Comparator进行排序</strong>，具体取决于使用的构造函数。 优先级队列不允许null元素。 依赖于自然排序的优先级队列也不允许插入不可比较的对象（这样做可能会导致ClassCastException ）。remove(Object)和contains(Object)方法的<strong>线性时间</strong>； <strong>检索方法（ peek 、 element和size ）的固定时间</strong></p>
+<p>​    1.<strong>Boolean add(E e)</strong> </p>
+<p>​     将方法将指定的元素插入队列</p>
+<p>​    2.<strong>Comparator comparator()</strong> </p>
+<p>​    此方法返回用于对队列中的元素进行排序的<strong>比较器</strong> 。 如果未指定比较器，并且队列根据其元素的自然顺序排序，则返回null。</p>
+<p>   3.<strong>boolean contains(Object o)</strong></p>
+<p>​    如果队列包含指定的元素，则返回true。</p>
+<p>   4.<strong>E peek（）</strong> </p>
+<p>​    检索此队列的开头，如果此队列为空，则返回null。 换句话说，它返回具有最高优先级的元素。</p>
+<p>​    5.<strong>E poll（）</strong> </p>
+<p>​    此方法还检索队列的头部（具有最高优先级的元素），如果队列为空，则返回null。 但是与peek（）不同，它还删除了元素。</p>
+<h3 id="JAVA栈"><a href="#JAVA栈" class="headerlink" title="JAVA栈"></a>JAVA栈</h3><p>栈后进先出</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span> stack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Stack</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <table>
@@ -557,7 +563,7 @@ add">
 <td align="center">返回最靠近顶端的目标元素到顶端的距离。</td>
 </tr>
 </tbody></table>
-<h4 id="JAVA链表"><a href="#JAVA链表" class="headerlink" title="JAVA链表"></a>JAVA链表</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">></span></span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="JAVA链表"><a href="#JAVA链表" class="headerlink" title="JAVA链表"></a>JAVA链表</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">></span></span> res <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>add链表尾部加入一个元素</p>
 <p>addFirst链表头部加入元素</p>
@@ -1073,9 +1079,6 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/key-wu_ljm/libs/share/js/social-share.min.js"></script>
-    
 
     
 
@@ -1086,6 +1089,8 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
             
         </div>
     </div>
+
+    
 
     
 
@@ -1116,7 +1121,7 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
                     <div class="card-image">
                         
                         
-                        <img src="/key-wu_ljm/medias/featureimages/2.jpg" class="responsive-img" alt="Python笔记">
+                        <img src="/key-wu_ljm/medias/featureimages/10.jpg" class="responsive-img" alt="Python笔记">
                         
                         <span class="card-title">Python笔记</span>
                     </div>
@@ -1165,7 +1170,7 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
                     <div class="card-image">
                         
                         
-                        <img src="/key-wu_ljm/medias/featureimages/17.jpg" class="responsive-img" alt="二叉树相关算法">
+                        <img src="/key-wu_ljm/medias/featureimages/7.jpg" class="responsive-img" alt="二叉树相关算法">
                         
                         <span class="card-title">二叉树相关算法</span>
                     </div>
@@ -1328,6 +1333,60 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
 
     <footer class="page-footer bg-color">
     
+        <link rel="stylesheet" href="/key-wu_ljm/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="4865348580"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/key-wu_ljm/libs/aplayer/APlayer.min.js"></script>
+<script src="/key-wu_ljm/libs/aplayer/Meting.min.js"></script>
+
+    
 
     <div class="container row center-align"
          style="margin-bottom: 15px !important;">
@@ -1342,7 +1401,7 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">10.5k</span>
+                        class="white-color">12.2k</span>
             
             
             
@@ -1374,11 +1433,11 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
                         var years = days * 365;
                         var today = new Date();
                         var startYear = "2021";
-                        var startMonth = "11";
-                        var startDate = "1";
-                        var startHour = "1";
-                        var startMinute = "12";
-                        var startSecond = "20";
+                        var startMonth = "10";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
                         var todayYear = today.getFullYear();
                         var todayMonth = today.getMonth() + 1;
                         var todayDate = today.getDate();
@@ -1422,12 +1481,12 @@ res<span class="token punctuation">.</span><span class="token function">add</spa
             
                 <span id="icp"><img src="/key-wu_ljm/medias/icp.png"
                                     style="vertical-align: text-bottom;"/>
-                <a href="/key-wu_ljm/null" target="_blank">暂时还没有哦# 备案信息</a>
+                <a href="/key-wu_ljm/null" target="_blank">暂时还没有哦</a>
             </span>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/KeyWu" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
@@ -1593,20 +1652,18 @@ $(function () {
             // 只在桌面版网页启用特效
             var windowWidth = $(window).width();
             if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/key-wu_ljm/"><\/script>');
+                document.write('<script type="text/javascript" src="/key-wu_ljm/libs/others/snow.js"><\/script>');
             }
         </script>
     
 
     <!-- 鼠标星星特效 -->
+    
+
      
-        <script type="text/javascript">
-            // 只在桌面版网页启用特效
-            var windowWidth = $(window).width();
-            if (windowWidth > 768) {
-                document.write('<script type="text/javascript" src="/key-wu_ljm/"><\/script>');
-            }
-        </script>
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/key-wu_ljm/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
     
 
     <!-- Baidu Analytics -->
@@ -1627,6 +1684,8 @@ $(function () {
     })();
 </script>
 
+    
+    <script src="/key-wu_ljm/libs/others/clicklove.js" async="async"></script>
     
     
     <script async src="/key-wu_ljm/libs/others/busuanzi.pure.mini.js"></script>

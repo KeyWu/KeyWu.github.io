@@ -241,8 +241,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #ffffff 5%, #7B68EE 100%);
-    opacity: 0.8;
+    background-image: linear-gradient(to right, #36d2ee 0%, #32e6ce 100%);
+    opacity: 0.6;
 }
 
 .text-color {
@@ -551,10 +551,10 @@ header .go-back i {
     height: 40vh !important;
 }
 
-.bg-cover:after {
+/*.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
-}
+}*/
 
 .bg-cover:before,
 .bg-cover:after {
@@ -594,7 +594,7 @@ header .go-back i {
     font-weight: 400;
 }
 
-#@-webkit-keyframes rainbow {
+@-webkit-keyframes rainbow {
 
     0%,
     100% {
@@ -640,7 +640,7 @@ header .go-back i {
     }
 }
 
-#@keyframes rainbow {
+@keyframes rainbow {
 
     0%,
     100% {
@@ -1318,7 +1318,8 @@ thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #1cb6f3 0%, #08ecd9 100%) !important;
+    opacity: 0.6;
 }
 
 .chip .tag-length {
@@ -2144,7 +2145,17 @@ p.search-result-summary{
     padding: 0;
     margin: 0;
 }
-code[class*="language-"], pre[class*="language-"] {
-    white-space: pre !important;
+/* 滚动条 */
+::-webkit-scrollbar-thumb {
+    background-color: #2affed;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 3em;
 }
-  
+::-webkit-scrollbar-track {
+    background-color: #ffcacaff;
+    border-radius: 3em;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px;
+}
